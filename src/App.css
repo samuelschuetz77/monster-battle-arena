@@ -1,1 +1,18 @@
-/* Styles go here. */
+.battle-status-card {
+  max-width: 360px;
+  margin: 24px auto;
+  padding: 18px;
+  border: 2px solid #533483;
+  border-radius: 8px;
+  background: #f5f0ff;
+  color: #1f1633;
+  box-shadow: 0 8px 18px rgba(31, 22, 51, 0.14);
+}
+
+.battle-status-card h2 {
+  margin: 0 0 12px;
+}
+
+.battle-status-card p {
+  margin: 6px 0;
+}

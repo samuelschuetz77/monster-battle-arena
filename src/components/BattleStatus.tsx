@@ -1,8 +1,18 @@
-// Part 9: BattleStatusProps type (playerName, playerHealth, monsterHealth).
-// Pure display component — no state of its own, everything comes from App.
+type BattleStatusProps = {
+  playerName: string
+  playerHealth: number
+  monsterName: string
+  monsterHealth: number
+}
 
-function BattleStatus() {
-  return null
+function BattleStatus(props: BattleStatusProps) {
+  return (
+    <section className="battle-status-card">
+      <h2>Battle Status</h2>
+      <p>{props.playerName}: {props.playerHealth} HP</p>
+      <p>{props.monsterName}: {props.monsterHealth} HP</p>
+    </section>
+  )
 }
 
 export default BattleStatus

@@ -1,9 +1,15 @@
-// Part 3 & 4: AttackButtonProps type (label, damage, onAttack function).
-// Does not own health — calls the function passed down from App.
-// Reuse this same component for Normal/Heavy/Ultimate (Part 4).
+type AttackButtonProps = {
+  label: string
+  damage: number
+  onAttack: (damage: number) => void
+}
 
-function AttackButton() {
-  return null
+function AttackButton(props: AttackButtonProps) {
+  return (
+    <button onClick={() => props.onAttack(props.damage)}>
+      {props.label}
+    </button>
+  )
 }
 
 export default AttackButton

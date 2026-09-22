@@ -1,8 +1,19 @@
-// Part 1: MonsterProps type (name, type, health, attackDamage) + Monster
-// component that displays them. Health comes from App state via props.
+type MonsterProps = {
+  name: string
+  type: string
+  health: number
+  attackDamage: number
+}
 
-function Monster() {
-  return null
+function Monster(props: MonsterProps) {
+  return (
+    <section>
+      <h2>{props.name}</h2>
+      <p>Type: {props.type}</p>
+      <p>Health: {props.health}</p>
+      <p>Attack Damage: {props.attackDamage}</p>
+    </section>
+  )
 }
 
 export default Monster
